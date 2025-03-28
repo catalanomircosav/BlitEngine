@@ -1,5 +1,5 @@
 # Introduction
-BlitEngine is a simple modular 2D Game Engine developed in C++ with OpenGL and an GLFW. This documentation explains how to set up the development environment and build the project.
+BlitEngine is a simple modular 2D Game Engine developed in C++ with OpenGL and GLFW. This documentation explains how to set up the development environment and build the project.
 ## Project Structure
 ```
   BlitEngine/
