@@ -1,16 +1,19 @@
 # Introduction
 BlitEngine is a simple modular 2D Game Engine developed in C++ with OpenGL and an GLFW. This documentation explains how to set up the development environment and build the project.
 ## Project Structure
-BlitEngine/
-├── Engine/          # Engine source code
-├── Game/            # Example game code
-├── Thirdparty/      # Thirdparty libraries
-├── Build/           # Generated folder (not versioned)
-└── Scripts/         # Utility scripts
+```
+  BlitEngine/
+  ├── Engine/          # Engine source code
+  ├── Game/            # Example game code
+  ├── Thirdparty/      # Thirdparty libraries
+  ├── Build/           # Generated folder (not versioned)
+  └── Scripts/         # Utility scripts
+```
 ## Prerequisites
-   - C++ compiler supported by CMake
-   - CMake 3.17+
-   - Git
+1. C++ compiler supported by CMake
+2. CMake 3.17+
+3. Git
+
 ## Initial Setup
 1. Clone the repository
 ```
