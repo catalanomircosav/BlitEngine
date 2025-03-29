@@ -1,30 +1,26 @@
 @echo off
 setlocal
 
-:: Verifica che CMake sia nel PATH
+:: Check if CMake is in PATH
 where cmake >nul 2>nul
 if %errorlevel% neq 0 (
-    echo CMake non e' nel tuo PATH. Per favore installa CMake e aggiungilo al PATH.
+    echo CMake is not in your PATH. Please install CMake and add it to PATH.
     pause
     exit /b 1
 )
 
-:: Crea la cartella di build
+:: Create build directory
 mkdir ..\Build 2>nul
 cd ..\Build
 
-:: Scegli il generatore (modifica se necessario)
-set GENERATOR="Visual Studio 17 2022"
-
-:: Esegui CMake
-cmake .. -G %GENERATOR%
+cmake ..
 
 if %errorlevel% neq 0 (
-    echo Configurazione CMake fallita!
+    echo CMake configuration failed!
     pause
     exit /b 1
 )
 
-echo Configurazione completata con successo!
-echo Puoi ora aprire il file .sln in ..\Build
+echo Configuration completed successfully!
+echo You can now open the .sln file in ..\Build
 pause
