@@ -1,41 +1,41 @@
 @echo off
 setlocal
 
-:: Verifica che siamo nella cartella corretta
+:: Check that we're in the correct folder
 if not exist "..\CMakeLists.txt" (
-    echo Errore: Esegui questo script dalla cartella Scripts
+    echo Error: Run this script from the Scripts folder
     pause
     exit /b 1
 )
 
-:: Verifica che la cartella Build esista
+:: Check that the Build folder exists
 if not exist "..\Build" (
-    echo Errore: Prima esegui setup.bat per configurare il progetto
+    echo Error: First run setup.bat to configure the project
     pause
     exit /b 1
 )
 
-:: Vai alla cartella Build
+:: Go to the Build folder
 cd ..\Build
 
-echo Compilazione in corso...
+echo Compiling...
 
-:: Scegli il tipo di build (modifica se necessario)
+:: Choose the build type (modify if needed)
 set BUILD_CONFIG=Debug
 
-:: Esegui la compilazione
+:: Run the compilation
 cmake --build . --config %BUILD_CONFIG% -- /m /nologo /v:minimal
 
 if %errorlevel% neq 0 (
-    echo Compilazione fallita!
+    echo Compilation failed!
     pause
     exit /b 1
 )
 
-echo Compilazione completata con successo!
-echo Gli eseguibili sono in ..\Build\bin\%BUILD_CONFIG%\
+echo Compilation completed successfully!
+echo The executables are in ..\Build\bin\%BUILD_CONFIG%\
 
-:: Copia gli asset nella cartella di output (se necessario)
+:: Copy assets to the output folder (if needed)
 if not exist "bin\%BUILD_CONFIG%\Assets" mkdir "bin\%BUILD_CONFIG%\Assets"
 xcopy /Y /Q "..\Game\Assets\*" "bin\%BUILD_CONFIG%\Assets\"
 
