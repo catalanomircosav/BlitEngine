@@ -17,7 +17,7 @@ BlitEngine is a simple modular 2D Game Engine developed in C++ with OpenGL and G
 ## Initial Setup
 1. Clone the repository
 ```
-   git clone https://github.com/catalanomircosav/BlitEngine.git```
+   git clone https://github.com/catalanomircosav/BlitEngine.git
    cd BlitEngine
 ```
   2. Initialize the submodules
