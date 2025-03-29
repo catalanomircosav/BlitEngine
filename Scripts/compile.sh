@@ -30,9 +30,3 @@ fi
 
 echo "Compilation completed successfully!"
 echo "The executables are in ../Build/bin/"
-
-# Copy assets to the output folder (if needed)
-if [ -d "../Game/Assets" ]; then
-    mkdir -p bin/Assets
-    cp -r ../Game/Assets/* bin/Assets/
-fi

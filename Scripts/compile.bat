@@ -35,8 +35,4 @@ if %errorlevel% neq 0 (
 echo Compilation completed successfully!
 echo The executables are in ..\Build\bin\%BUILD_CONFIG%\
 
-:: Copy assets to the output folder (if needed)
-if not exist "bin\%BUILD_CONFIG%\Assets" mkdir "bin\%BUILD_CONFIG%\Assets"
-xcopy /Y /Q "..\Game\Assets\*" "bin\%BUILD_CONFIG%\Assets\"
-
 pause
